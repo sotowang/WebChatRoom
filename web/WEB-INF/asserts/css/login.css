@@ -1,0 +1,90 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+.container{
+	max-width: 540px;
+	margin: 0 auto;
+	margin-bottom:32px ;
+}
+
+.login-area{
+	width: 100%;
+	margin: 0 auto;
+	margin-top:40px ;
+}
+
+.login-title{
+	width: 100%;
+	text-align: center;
+	display: inline-block;
+	font-family: "微软雅黑";
+	font-weight:lighter;
+	font-size: 1.8em;
+}
+
+.fm-login{
+	margin-top: 40px;
+}
+
+.fm-login .fm-group{
+	width:100%;
+	height: 48px;
+	margin-bottom: 40px;
+}
+
+.fm-login .fm-group .input-info{
+	height: 100%;
+	width: 10%;
+	padding-top: 12px;
+	float: left;
+	font-family: "微软雅黑";
+	font-size: 18px;
+}
+
+.fm-login .fm-group input {
+	height: 100%;
+	width:85%;
+	float: right;
+	font-size: 1.1em;
+	font-family: "微软雅黑";
+	padding-left: 12px;
+}
+
+.btn-primary {
+	width: 80%;
+	height: 48px;
+	margin-left:10% ;
+	border-radius: 10px;
+	background-color: #0088CC;
+	color: white;
+	font-size: 20px;
+	margin-right: 10px;
+}
+
+.bottomt-content{
+	width: 100%;
+	height: 40px;
+}
+
+.bottom-content a{
+	text-decoration: none;
+}
+
+.link-register {
+	width: 80px;
+	margin-top: 15px;
+	margin-left: 20%;
+	float:left;
+	font-size: 15px;
+}
+
+.link-forget{
+	width: 80px;
+	margin-top: 15px;
+	margin-right: 20%;
+	float:right;
+	font-size: 15px;
+}
+	

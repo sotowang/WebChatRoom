@@ -1,0 +1,202 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+.container{
+	width: 450px;
+	margin: 0 auto;
+	border: 1px solid #BFBFBF;
+}
+
+.header-nav{
+	width:100%;
+	height: 32px;
+	background: #B3B3B3;
+	text-align: center;
+}
+
+.header-nav a{
+	text-align: center;
+	line-height: 32px;
+	font-size: 18px;
+	color: #FFFFFF;
+	font-family: "Consolas", "Î¢ÈíÑÅºÚ", "Arial";
+}
+
+.content-top{
+	width: 100%;
+	height:27px;
+	padding-top: 10px;
+	background-color: #EEEEEE;
+	line-height: 20px;
+	color: black;
+	font-size: 18px;
+}
+
+.content-top .chat-username{
+	width: 30%;
+	text-align: center;
+	display: inline-block;
+}
+
+.content-top .chat-title{
+	width:30%;
+	text-align: center;
+	display: inline-block;
+}
+
+.content-top .chat-close{
+	width: 30%;
+	text-align: center;
+	display: inline-block;
+}
+
+.online-list{
+	width:80%;
+	position: relative;
+	z-index: 1;
+	left: 10%;
+	height: 360px;
+	border-radius:8px ;
+	top:16px;
+	border-bottom: 1px solid #999999;
+	border-left: 1px solid #999999;
+	border-right: 1px solid #999999;
+	display: none;
+}
+
+.online-list .panel-nav {
+	width: 100%;
+	height: 35px;
+	padding-top: 5px;
+	color: white;
+	background-color: #0088CC;
+	text-align: center;
+	line-height: 30px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.online-list .panel-nav a.opt-close {
+	color: #fff;
+	font-size: 18px;
+	float: right;
+	position: absolute;
+	right: 5px;
+}
+
+.online-list a {
+    text-decoration: none;
+}
+
+.online-list .contact-list {
+	height: 312px;
+	background: white;
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+
+.online-list .contact-list .users-list {
+	width: 100%;
+	height: 100%;
+    overflow-y: scroll;
+}
+
+.user-cell .user-info{
+	width: 100%;
+	height: 30px;
+	border-bottom: 1px solid grey;
+	color: #333333;
+	line-height: 30px;
+	display: block;
+	font-size: 15px;
+	padding-left: 3px;
+}
+
+.content-message{
+	width: 100%;
+	height: 300px;
+	overflow-y: scroll;
+}
+
+.content-message .messages-list{
+	margin-top: 24px;
+	width:100%;
+}
+
+.message-time{
+	font-size: 15px;
+}
+
+.send-user{
+	font-size:15px;
+}
+
+.message-content{
+	font-size: 20px;
+}
+
+.content-message .messages-list .message-cell {
+	background: #EEEEEE;
+    min-width: 30%;
+    max-width: 60% ;
+    min-height: 20px;
+    padding: 5px;
+    margin-bottom: 16px;
+    display: inline-block;
+    text-align: left;
+    animation: addanimation 0.8s 1 linear;
+}
+
+ .content-message .messages-list .message-sent{
+    float: right;
+    margin-right: 8px;
+    margin-left: 30%;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+}
+
+.content-message .messages-list .message-recieved {
+	float: left;
+    margin-left: 8px;
+    margin-right: 30%;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+ 
+.bottom-anchors {
+    width: 100%;
+    height: 5px;
+    display: inline-block;
+}
+
+.message-operate {
+	width: 100%;
+	height: 35px;
+}
+
+.message-operate .fm-message {
+	width: 85%;
+	height: 100%;
+	float: left;
+}
+
+.message-operate .fm-message .message-input {
+	height: 100%;
+	width: 100%;
+	font-size: 18px;
+	color:#000000;
+	padding-left: 2%;
+	font-family: "Consolas", "Î¢ÈíÑÅºÚ", "Arial";
+}
+.message-send{
+	width: 14%;
+	float: right;
+	font-size: 19px;
+	text-align: center;
+	line-height:20px ;
+	height: 100%;
+	background-color:#999999;
+}
+
