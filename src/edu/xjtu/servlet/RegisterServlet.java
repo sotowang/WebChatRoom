@@ -20,6 +20,7 @@ import java.io.PrintWriter;
 public class RegisterServlet extends JsonServlet {
     public static final String LOGINED_USER_SESSION_ATTR = "logined_user";
 
+    //提交方式 为post
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         PrintWriter printWriter = resp.getWriter();

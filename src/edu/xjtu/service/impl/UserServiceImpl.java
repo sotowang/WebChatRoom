@@ -6,7 +6,7 @@ import edu.xjtu.service.UserService;
 public class UserServiceImpl {
     private UserService userService = null;
 
-    public boolean authenticateUser(User user) {
+    public boolean authenticateUSer(User user) {
         return userService.userExists(user);
     }
 
