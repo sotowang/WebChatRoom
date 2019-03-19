@@ -25,6 +25,16 @@
         <url-pattern>/Login</url-pattern>
     </servlet-mapping>
 
+
+    <servlet>
+        <servlet-name>ChatPage</servlet-name>
+        <jsp-file>/chat.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ChatPage</servlet-name>
+        <url-pattern>/Chat</url-pattern>
+    </servlet-mapping>
+
     <welcome-file-list>
         <welcome-file>login.jsp</welcome-file>
     </welcome-file-list>

@@ -37,6 +37,16 @@ public class ChatController {
     //登陆用户
     private User user;
 
+
+    public static List<ChatController> getConnectedUsers() {
+        return connectedUsers;
+    }
+
+    public User getUser() {
+        return user;
+    }
+
+
     @OnOpen
     public void onOpen(Session session, @PathParam(value = "username") String username) {
         this.session = session;

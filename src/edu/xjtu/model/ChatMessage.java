@@ -6,7 +6,7 @@ import org.json.JSONObject;
  * 存储聊天信息
  * 包括：
  */
-public class ChatMessage implements IJsonSerialize{
+public class ChatMessage implements IJsonSerialize {
 
     public static final String FROM = "from";
     public static final String TO = "to";
@@ -25,6 +25,9 @@ public class ChatMessage implements IJsonSerialize{
     private String messageType;
     //发送者昵称
     private String fromNick;
+    public ChatMessage() {
+        super();
+    }
 
     public ChatMessage(String from, String to, String messageContent) {
         this.from = from;
@@ -73,5 +76,35 @@ public class ChatMessage implements IJsonSerialize{
 
         }
 
+    }
+
+
+
+    public String getFrom() {
+        return from;
+    }
+
+    public void setFrom(String from) {
+        this.from = from;
+    }
+
+    public String getTo() {
+        return to;
+    }
+
+    public void setTo(String to) {
+        this.to = to;
+    }
+
+    public void setMessageContent(String messageContent) {
+        this.messageContent = messageContent;
+    }
+
+    public void setMessageType(String messageType) {
+        this.messageType = messageType;
+    }
+
+    public void setFromNick(String fromNick) {
+        this.fromNick = fromNick;
     }
 }
