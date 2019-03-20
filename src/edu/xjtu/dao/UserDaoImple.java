@@ -22,4 +22,38 @@ public class UserDaoImple implements UserDao {
 		return existUser;
 	}
 
+	public boolean regist(User user) {
+		QueryRunner queryRunner = new QueryRunner(JDBCUtils.getDataSource());
+		String sql1 = "select * from user where username = ?";
+
+		try {
+			if (null != queryRunner.query(sql1, new BeanHandler<User>(User.class), user.getUsername())) {
+				return false;
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+
+		String sql = "insert into user values(?,?,?,?)";
+		Object[] params = {null,user.getUsername(),user.getPassword(),"user"};
+		try {
+			return queryRunner.update(sql, params) > 0;
+		} catch (SQLException e) {
+			e.printStackTrace();
+			throw new RuntimeException("用户注册失败!");
+		}
+	}
+
+	public static void main(String[] args) {
+		UserDaoImple userDaoImple = new UserDaoImple();
+		User user = new User();
+		user.setUsername("test");
+		user.setPassword("test");
+//		System.out.println(userDaoImple.regist(user));
+		//
+
+		System.out.println(userDaoImple.login(user));
+	}
+
+
 }

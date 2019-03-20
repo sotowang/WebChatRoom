@@ -10,6 +10,11 @@ public class UserService {
 		UserDao dao = new UserDaoImple();
 		return dao.login(user);
 	}
+
+	public Boolean regist(User user) {
+		UserDao dao = new UserDaoImple();
+		return dao.regist(user);
+	}
 	
 	
 }

@@ -170,4 +170,38 @@ public class UserServlet extends BaseServlet {
 		return null;
 	}
 
+
+	/**
+	 * 注册功能
+	 * @param req
+	 * @param resp
+	 * @return
+	 */
+	public String regist(HttpServletRequest req,HttpServletResponse resp){
+		// 接收数据
+		Map<String, String[]> map = req.getParameterMap();
+		User user = new User();
+		// 封装数据
+		try {
+			BeanUtils.populate(user, map);
+			// 调用Service层处理数据
+			UserService us = new UserService();
+			;
+			if (!us.regist(user)) {
+				// 用户登录失败
+				req.setAttribute("msg", "注册失败,请更换用户名再注册!");
+				return "/register.jsp";
+			} else {
+
+				req.setAttribute("msg", "注册成功，请登陆!");
+
+//				resp.sendRedirect(req.getContextPath() + "/login.jsp");
+				return "/login.jsp";
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return null;
+	}
+
 }

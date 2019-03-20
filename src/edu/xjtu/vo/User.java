@@ -125,8 +125,8 @@ public class User implements HttpSessionBindingListener, IJsonSerialize {
 		super();
 	}
 
-	public User(int id, String username, String password, String type) {
-		this.id = id;
+	public User(String username, String password, String type) {
+
 		this.username = username;
 		this.password = password;
 		this.type = type;

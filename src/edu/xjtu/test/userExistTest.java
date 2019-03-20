@@ -10,10 +10,12 @@ public class userExistTest {
         User user3 = new User();
         user1.setPassword("111");
         user1.setUsername("111");
+        user1.setType("user");
 
 
         user2.setUsername("aaa");
         user2.setPassword("aaa");
+        user2.setType("user");
 
         user3.setUsername("sotowang");
         user3.setPassword("sotowang");

@@ -37,8 +37,8 @@
 <div class="container">
     <div class="login-area">
         <span class="login-title">账号登录</span>
-
-        <form method="POST" action="${pageContext.request.contextPath }/user" onsubmit="return check()" class="fm-login">
+        <center><h3 style="color:red;">${ msg }</h3></center>
+        <form id="form1" method="POST" action="${pageContext.request.contextPath }/user" onsubmit="return check()" class="fm-login">
             <input type="hidden" name="method" value="login">
 
             <div class="fm-group"><span class="input-info">用户名</span><input type="text" placeholder="用户名" id="username" name="username" required="required"></div>

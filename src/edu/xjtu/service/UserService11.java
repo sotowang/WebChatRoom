@@ -107,4 +107,11 @@ public class UserService11 {
         }
     }
 
+    public static void main(String[] args) {
+        User user = new User("test","test","user");
+        UserService11 userService11 = new UserService11();
+        System.out.println(userService11.addUser(user));
+        System.out.println( userService11.userExists(user));
+    }
+
 }
