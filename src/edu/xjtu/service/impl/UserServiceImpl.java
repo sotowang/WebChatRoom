@@ -4,7 +4,7 @@ import edu.xjtu.model.User;
 import edu.xjtu.service.UserService;
 
 public class UserServiceImpl {
-    private UserService userService = null;
+    private UserService userService = new UserService();
 
     public boolean authenticateUSer(User user) {
         return userService.userExists(user);

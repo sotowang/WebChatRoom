@@ -10,7 +10,7 @@ public class ResponseInformation {
         JSONObject jsonObject = new JSONObject();
 
         try {
-            jsonObject.put("status", "succcess");
+            jsonObject.put("status", "success");
         } catch (Exception e) {
             e.printStackTrace();
         }

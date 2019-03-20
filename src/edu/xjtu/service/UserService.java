@@ -49,7 +49,7 @@ public class UserService {
 
 
     public boolean addUser(User user) {
-        if (!userExists(user)) {
+        if (userExists(user)) {
             return false;
         }
         if (!db.openConnection()) {

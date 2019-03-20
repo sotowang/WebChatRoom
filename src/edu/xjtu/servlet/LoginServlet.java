@@ -33,7 +33,7 @@ public class LoginServlet extends JsonServlet{
             UserServiceImpl impl = new UserServiceImpl();
             user.readFromJson(loginUserJson);
 
-            if (impl.authenticateUSer(user)) {
+            if (impl.authenticateUSer(user.getUsername(),user.getPassword())) {
                 PrintWriter writer = response.getWriter();
                 writer.println(ResponseInformation.getSuccessInformation());
                 writer.close();
