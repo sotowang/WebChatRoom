@@ -25,7 +25,7 @@ var sysBBS = "<span style='font-size:14px; line-height:30px;'>欢迎进入聊天
 				// 提示用户下线了
 				alert("用户已经被踢下线了!");
 				// 回到登录页面!
-				window.location = "index.jsp";
+				window.location = "login.jsp";
 			}
 		});
 	}
@@ -95,9 +95,9 @@ var sysBBS = "<span style='font-size:14px; line-height:30px;'>欢迎进入聊天
 
 	<table width="778" height="150" border="0" align="center"
 		cellpadding="0" cellspacing="0" background="images/top.jpg">
-		<tr>
-			<td>&nbsp;</td>
-		</tr>
+		<%--<tr>--%>
+			<%--<td>&nbsp;</td>--%>
+		<%--</tr>--%>
 	</table>
 	<table width="778" height="276" border="0" align="center"
 		cellpadding="0" cellspacing="0">
@@ -106,7 +106,7 @@ var sysBBS = "<span style='font-size:14px; line-height:30px;'>欢迎进入聊天
 			<td width="613" height="200px" valign="top"
 				background="images/main_bj.jpg" bgcolor="#FFFFFF"
 				style="padding:5px; ">
-				<div style="height:290px; overflow:hidden" id="content">聊天内容</div></td>
+				<div style="height:580px; overflow:hidden" id="content">聊天内容</div></td>
 
 		</tr>
 	</table>
@@ -119,7 +119,7 @@ var sysBBS = "<span style='font-size:14px; line-height:30px;'>欢迎进入聊天
 			<tr>
 				<td height="30" align="left">&nbsp;</td>
 				<td height="37" align="left">
-				<input name="from" type="hidden" value="${existUser.username}">[${existUser.username} ]对 
+				<input name="from" type="hidden" value="${existUser.username}">[${existUser.username} ] 对
 				<input name="to" type="text" value="" size="35" readonly="readonly"> 表情 
 				<select name="face" class="wenbenkuang">
 						<option value="无表情的">无表情的</option>
