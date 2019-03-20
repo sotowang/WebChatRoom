@@ -34,7 +34,7 @@ function findHistory(history){		 //找到对应的聊天历史
 	}
 } 
 var websocket=null;
-var url = 'ws://localhost:8080/ChatRoom/chat/' + loginedUsername;
+var url = 'ws://localhost:8080/123/chat/' + "aaa";
 function initConnection(){
 	if ("WebSocket" in window){
 		websocket=new WebSocket(url);

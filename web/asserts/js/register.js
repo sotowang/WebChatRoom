@@ -24,7 +24,7 @@ function onRegister() {
             contentType:'application/json;charset=utf-8',
             success:function(msg){
                 if (msg.status != null && msg.status == "success") {
-                    window.location.href = 'Chat';
+                    window.location.href = 'Login';
                 }else {
                     alert('注册失败 ' + "原因是： \n" + msg.reason);
 

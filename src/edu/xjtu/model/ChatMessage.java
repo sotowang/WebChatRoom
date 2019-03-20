@@ -46,7 +46,6 @@ public class ChatMessage implements IJsonSerialize {
                 '}';
     }
 
-    @Override
     public JSONObject toJson() {
         JSONObject jsonObject = new JSONObject();
         jsonObject.put(FROM, from);
@@ -57,7 +56,6 @@ public class ChatMessage implements IJsonSerialize {
         return jsonObject;
     }
 
-    @Override
     public void readFromJson(JSONObject jsonObject) {
         if (jsonObject.has(FROM)) {
             this.from = jsonObject.getString(FROM);

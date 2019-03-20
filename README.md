@@ -16,3 +16,37 @@
 @**OnClose**:当连接关闭时，会调用该注解修饰的方法。方法中的参数可以有Session，CloseReason，零或多个String类型的被PathParam修饰的参数
 
 @**OnError**： 当WebSocket通信过程中发生了错误，会调用该注解修饰的方法。方法中的参数可以有session，Throwable，零或多个String类型的补发@PathParam注释的参数。
+
+
+
+## 数据库设计
+
+```sql
+CREATE TABLE chatroom.`user` (
+	id int PRIMARY KEY auto_increment,
+	username VARCHAR(20),
+	password VARCHAR(20),
+	type VARCHAR(20)
+)
+ENGINE=InnoDB
+DEFAULT CHARSET=utf8
+COLLATE=utf8_general_ci ;
+```
+
+```sql
+
+use chatroom;
+insert into user VALUES (null,'aaa','aaa','admin');
+insert into user VALUES (null,'bbb','bbb','user');
+insert into user VALUES (null,'ccc','ccc','admin');
+insert into user VALUES (null,'ddd','ddd','user');
+```
+
+## 系统架构
+Servlet+ JSP + JavaBean + JDBC
+Jar包：
+    * MYSQL
+    * C3P0连接池
+    * jstl
+    * dbutils
+

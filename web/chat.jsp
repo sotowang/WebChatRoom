@@ -26,10 +26,13 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <link rel="stylesheet" type="text/css" href="asserts/css/chat.css">
     <script src="asserts/js/jquery-2.1.4.min.js" type="text/javascript"></script>
+
     <script type="text/javascript">
         var loginedUsername = '<%=loginedUser.getUsername()%>'
         var loginedUsernick = '<%=loginedUser.getNickname()%>'
     </script>
+
+
     <script type="text/javascript" src="asserts/js/chat.js"></script>
     <title>聊天室</title>
 </head>

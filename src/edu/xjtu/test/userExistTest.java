@@ -1,8 +1,7 @@
 package edu.xjtu.test;
 
-import edu.xjtu.model.User;
-import edu.xjtu.service.UserService;
 import edu.xjtu.service.impl.UserServiceImpl;
+import edu.xjtu.vo.User;
 
 public class userExistTest {
     public static void main(String[] args) {
@@ -18,12 +17,12 @@ public class userExistTest {
 
         user3.setUsername("sotowang");
         user3.setPassword("sotowang");
-        user3.setNickname("nickname");
+        user3.setType("user");
 
         UserServiceImpl userService = new UserServiceImpl();
 
 
-//        UserService userService = new UserService();
+//        UserService11 userService = new UserService11();
         System.out.println(userService.authenticateUSer(user1));
 
         System.out.println(userService.authenticateUSer(user2));

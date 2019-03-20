@@ -62,7 +62,6 @@ public class User implements IJsonSerialize{
     }
 
     //将字段转换 为JSON格式存储
-    @Override
     public JSONObject toJson() {
         JSONObject jsonObject = new JSONObject();
         jsonObject.put(USERNAME, username);
@@ -74,7 +73,6 @@ public class User implements IJsonSerialize{
 
 
     //将对象属性从JSON读出
-    @Override
     public void readFromJson(JSONObject jsonObject) {
         if (jsonObject.has(USERNAME)) {
             this.username = jsonObject.getString(USERNAME);

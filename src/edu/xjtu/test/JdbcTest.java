@@ -24,7 +24,9 @@ public class JdbcTest {
             ResultSet resultSet = ps.executeQuery();
             while (resultSet.next()) {
                 System.out.println(resultSet.getString("username"));
-                System.out.println(resultSet.getString("nickname"));
+                System.out.println(resultSet.getString("password"));
+                System.out.println(resultSet.getString("type"));
+                System.out.println(resultSet.getString("id"));
                 return true;
 
             }

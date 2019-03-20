@@ -1,8 +1,8 @@
 package edu.xjtu.servlet;
 
-import edu.xjtu.model.User;
 import edu.xjtu.service.impl.UserServiceImpl;
 import edu.xjtu.utils.ResponseInformation;
+import edu.xjtu.vo.User;
 import org.json.JSONException;
 import org.json.JSONObject;
 

@@ -1,9 +1,9 @@
 package edu.xjtu.servlet;
 
 import edu.xjtu.controller.ChatController;
-import edu.xjtu.model.User;
 import edu.xjtu.service.impl.UserServiceImpl;
 import edu.xjtu.utils.ResponseInformation;
+import edu.xjtu.vo.User;
 import org.json.JSONArray;
 
 import javax.servlet.ServletException;

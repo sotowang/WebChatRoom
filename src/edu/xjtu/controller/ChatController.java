@@ -2,8 +2,8 @@ package edu.xjtu.controller;
 
 
 import edu.xjtu.model.ChatMessage;
-import edu.xjtu.model.User;
 import edu.xjtu.service.impl.UserServiceImpl;
+import edu.xjtu.vo.User;
 import org.json.JSONObject;
 
 import javax.websocket.*;
@@ -28,7 +28,7 @@ public class ChatController {
     private final String MessageTypeChatMessage = "ChatMessage";
 
     //存储在线用户
-    private static List<ChatController> connectedUsers = new CopyOnWriteArrayList<>();
+    private static List<ChatController> connectedUsers = new CopyOnWriteArrayList<ChatController>();
 
 
     //WebSocket的session会话
@@ -87,7 +87,10 @@ public class ChatController {
             return;
         }
         chatMessage.setMessageType(MessageTypeChatMessage);
-        chatMessage.setFromNick(user.getNickname());
+        chatMessage.setFromNick(user.getUsername());
+
+
+
         if (chatMessage.getTo() == null) {
             for (ChatController chatController : connectedUsers) {
                 if (chatController.user.getUsername().trim().equals(chatMessage.getFrom())) {

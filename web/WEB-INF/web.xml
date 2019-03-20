@@ -7,6 +7,7 @@
 
     <welcome-file-list>
         <welcome-file>/login.jsp</welcome-file>
+        <welcome-file>/index.jsp</welcome-file>
     </welcome-file-list>
 
     <servlet>
@@ -40,5 +41,18 @@
         <url-pattern>/Chat</url-pattern>
     </servlet-mapping>
 
+    <!-- 注册监听器 -->
+    <listener>
+        <listener-class>edu.xjtu.listener.MyServletContextListener</listener-class>
+    </listener>
 
+    <servlet>
+        <servlet-name>UserServlet</servlet-name>
+        <servlet-class>edu.xjtu.action.UserServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>UserServlet</servlet-name>
+        <url-pattern>/user</url-pattern>
+    </servlet-mapping>
 </web-app>

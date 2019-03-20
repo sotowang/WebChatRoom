@@ -18,12 +18,29 @@
 
     <title>用户登录</title>
 </head>
+<script type="text/javascript">
+    function check(){
+        if(document.getElementById("form1").username.value==""){
+            alert("请输入用户名！");
+            document.getElementById("form1").username.focus();
+            return false;
+        }
+
+        if(document.getElementById("form1").password.value==""){
+            alert("请输入密码名！");
+            document.getElementById("form1").password.focus();
+            return false;
+        }
+    }
+</script>
 <body>
 <div class="container">
     <div class="login-area">
         <span class="login-title">账号登录</span>
 
-        <form method="POST" onsubmit="return onLogin()" class="fm-login">
+        <form method="POST" action="${pageContext.request.contextPath }/user" onsubmit="return check()" class="fm-login">
+            <input type="hidden" name="method" value="login">
+
             <div class="fm-group"><span class="input-info">用户名</span><input type="text" placeholder="用户名" id="username" name="username" required="required"></div>
             <div class="fm-group"><span class="input-info">密码</span><input type="password" placeholder="密码" id="password" name="password" required="required"></div>
             <input type="submit" value="登录" class="btn-primary">
